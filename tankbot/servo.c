@@ -31,17 +31,21 @@ void update_motors(int16_t lMotorSpeed, int16_t rMotorSpeed){
     if (lMotorSpeed < 0){
         pin_clear(IN_LB);
         pin_set(IN_LA);
+        printf("left backwards\n");
     }else{
         pin_set(IN_LB);
         pin_clear(IN_LA);
+        printf("left forwards\n");
     }
 
     if (rMotorSpeed < 0){
         pin_clear(IN_RB);
         pin_set(IN_RA);
+        printf("right backwards\n");
     }else{
         pin_set(IN_RB);
         pin_clear(IN_RA);
+        printf("right forwards\n");
     }
 
     // set speed
@@ -63,6 +67,10 @@ void init(){
     led_on(&led1);
 
     // initialize the motors to zero
+    pin_digitalOut(IN_LA);
+    pin_digitalOut(IN_LB);
+    pin_digitalOut(IN_RA);
+    pin_digitalOut(IN_RB);
     oc_pwm(&oc1, PWM_L, NULL, 10E3, 0);
     oc_pwm(&oc2, PWM_R, NULL, 10E3, 0);
 

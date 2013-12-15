@@ -22,14 +22,16 @@ class USBServo:
 
     def set_motors(self, lMotor, rMotor):
         try:
-            self.dev.ctrl_transfer(0x40, SET_VALS, int(lMotor), int(rMotor))
+            self.dev.ctrl_transfer(0x40, SET_MOTORS, int(lMotor), int(rMotor))
         except usb.core.USBError:
-            print "Could not send SET_VALS vendor request."
+            print "Could not send SET_MOTORS vendor request."
 
 if __name__ == '__main__':
     dev = USBServo()
     time.sleep(1)
 
-    for i in range(-32500,32500,5000):
-        dev.set_motors(i,j)
-        time.sleep(0.001)
+    for i in range(-32500,32501,5000):
+        print i
+        dev.set_motors(i,i)
+        time.sleep(1)
+        # time.sleep(0.001)
