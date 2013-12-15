@@ -1,0 +1,7 @@
+lib/
+.pyc
+.hex
+.o
+.elf
+.lst
+.dblite
