@@ -9,6 +9,8 @@ env = Environment(PIC = '24FJ128GB206',
 
 if sys.platform == 'darwin':
   env.PrependENVPath('PATH', '/Applications/microchip/xc16/v1.20/bin')
+elif sys.platform == 'linux2':
+  env.PrependENVPath('PATH', '/opt/microchip/xc16/v1.11/bin/')
 else:
   env.PrependENVPath('PATH', 'C:\\Program Files (x86)\\Microchip\\xc16\\v1.11\\bin')
 
@@ -21,7 +23,7 @@ list = Builder(action = 'xc16-objdump -S -D $SOURCE > $TARGET',
                src_suffix = 'elf')
 env.Append(BUILDERS = {'List' : list})
 
-env.Program('servo', ['servo.c',
+env.Program('servo', ['tankUSB.c',
                       'descriptors.c', 
                       'usb.c',
                       '../lib/uart.c',
