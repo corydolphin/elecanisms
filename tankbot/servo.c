@@ -2,9 +2,11 @@
 #include "config.h"
 #include "common.h"
 #include "ui.h"
+#include "uart.h"
 #include "timer.h"
 #include "pin.h"
 #include "oc.h"
+#include "usb.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -44,8 +46,8 @@ void update_motors(int16_t lMotorSpeed, int16_t rMotorSpeed){
 
     // set speed
     // TODOL think about what will happen for MAX_NEG
-    pin_write(PWM_1, abs(lMotorSpeed)*2);
-    pin_write(PWM_1, abs(rMotorSpeed)*2);
+    pin_write(PWM_L, abs(lMotorSpeed)*2);
+    pin_write(PWM_R, abs(rMotorSpeed)*2);
 }
 
 void init(){
@@ -61,8 +63,8 @@ void init(){
     led_on(&led1);
 
     // initialize the motors to zero
-    oc_pwm(&oc1, PWM_1, NULL, 10E3, 0);
-    oc_pwm(&oc2, PWM_2, NULL, 10E3, 0);
+    oc_pwm(&oc1, PWM_L, NULL, 10E3, 0);
+    oc_pwm(&oc2, PWM_R, NULL, 10E3, 0);
 
     // timer for the blinking light
     timer_setPeriod(&timer2, 0.5);
@@ -85,6 +87,7 @@ int16_t main(void) {
 
 void VendorRequests(void) {
     WORD temp;
+    int16_t lMotorSpeed, rMotorSpeed;
 
     switch (USB_setup.bRequest) {
         case HELLO:
@@ -93,9 +96,9 @@ void VendorRequests(void) {
             BD[EP0IN].status = 0xC8;    // send packet as DATA1, set UOWN bit
             break;
         case SET_MOTORS:
-            //extract
-            int16_t lMotorSpeed = USB_setup.wValue.w;
-            int16_t rMotorSpeed = USB_setup.wIndex.w;
+            //extract data
+            lMotorSpeed = USB_setup.wValue.w;
+            rMotorSpeed = USB_setup.wIndex.w;
             BD[EP0IN].bytecount = 0;    // set EP0 IN byte count to 0 
             BD[EP0IN].status = 0xC8;    // send packet as DATA1, set UOWN bit
 

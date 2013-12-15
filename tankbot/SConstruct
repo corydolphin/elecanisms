@@ -1,3 +1,4 @@
+import sys
 
 env = Environment(PIC = '24FJ128GB206', 
                   CC = 'xc16-gcc', 
@@ -7,7 +8,7 @@ env = Environment(PIC = '24FJ128GB206',
                   CPPPATH = '../lib')
 
 if sys.platform == 'darwin':
-    env.PrependENVPath('PATH', '/Applications/microchip/xc16/v1.20/bin')
+  env.PrependENVPath('PATH', '/Applications/microchip/xc16/v1.20/bin')
 else:
   env.PrependENVPath('PATH', 'C:\\Program Files (x86)\\Microchip\\xc16\\v1.11\\bin')
 
@@ -21,6 +22,9 @@ list = Builder(action = 'xc16-objdump -S -D $SOURCE > $TARGET',
 env.Append(BUILDERS = {'List' : list})
 
 env.Program('servo', ['servo.c',
+                      'descriptors.c', 
+                      'usb.c',
+                      '../lib/uart.c',
                       '../lib/timer.c',
                       '../lib/ui.c', 
                       '../lib/pin.c',
