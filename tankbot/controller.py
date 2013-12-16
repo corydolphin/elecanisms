@@ -41,7 +41,7 @@ class TankController():
 					tank.set_vel(0,0)
 					continue
 				if ((abs(rotErr) > .1) or (abs(transErr) > .1)) and transErr:
-					tank.set_vel(-20000*transErr, -20000*rotErr)
+					tank.set_vel(-20000*transErr, -30000*rotErr)
 		except(KeyboardInterrupt):
 			self.tank.set_motors(0,0)
 
