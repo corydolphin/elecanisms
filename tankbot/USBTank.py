@@ -28,7 +28,7 @@ class USBTank:
         self.rMotor = rMotor
         self.lMotor = lMotor
         try:
-            self.dev.ctrl_transfer(0x40, SET_MOTORS, int(self.leftMotor), int(self.rightMotor))
+            self.dev.ctrl_transfer(0x40, SET_MOTORS, int(self.lMotor), int(self.rMotor))
         except usb.core.USBError:
             print "Could not send SET_MOTORS vendor request."
 
