@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TankFollower | A project by five students at Olin College of Engineering</title>
+    <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more." />
+    
+    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com" />
+    <meta name="copyright" content="ZURB, inc. Copyright (c) 2013" />
+
+    <link rel="stylesheet" href="static/css/foundation.css" />
+    <link rel="stylesheet" href="static/css/elecanisms.css" />
+    <script src="static/js/modernizr.js"></script>
+  </head>
+  <body>
+    
+<!-- Nav and Banner -->
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="button-group">
+        <li><a href="./index.html" class="button">Overview</a></li>
+        <li><a href="./electrical.html" class="button">Electrical</a></li>
+        <li><a href="./mechanical.html" class="button">Mechanical</a></li>
+        <li><a href="#" class="button">Reflection</a></li>
+      </ul>
+      {% block banner %}          
+      {% endblock %}
+    </div>
+  </div>
+  
+  <!-- End Nav and Banner -->
+  
+  
+  <!-- Main Content Section -->
+  {% block maincontent %}
+
+  {% endblock %}
+  
+  
+  <!-- Footer -->
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Made with love by Cory Dolphin at Olin College</p>
+        </div>
+      </div>
+    </div> 
+  </footer>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+  </body>
+</html>
