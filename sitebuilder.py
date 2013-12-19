@@ -8,6 +8,7 @@ DEBUG = True
 app = Flask(__name__)
 app.config.from_object(__name__)
 app.config['FREEZER_DESTINATION'] = "_build"
+app.config['FREEZER_RELATIVE_URLS'] = True
 freezer = Freezer(app)
 
 
