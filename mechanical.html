@@ -10,8 +10,8 @@
     <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com" />
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2013" />
 
-    <link rel="stylesheet" href="static/css/elecanisms.css" />
     <link rel="stylesheet" href="static/css/foundation.css" />
+    <link rel="stylesheet" href="static/css/elecanisms.css" />
     <script src="static/js/modernizr.js"></script>
   </head>
   <body>
@@ -20,13 +20,13 @@
   <div class="row">
     <div class="large-12 columns">
       <ul class="button-group">
-        <li><a href="./electrical.html" class="button">Electrical</a></li>
-        <li><a href="./mechanical.html" class="button">Mechanical</a></li>
+        <li><a href="/" class="button">Overview</a></li>
+        <li><a href="/electrical.html" class="button">Electrical</a></li>
+        <li><a href="/mechanical.html" class="button">Mechanical</a></li>
         <li><a href="#" class="button">Reflection</a></li>
       </ul>
+                
       
-      <!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
-      <p><img src="static/img/image06_cropped.jpg" /></p>
     </div>
   </div>
   
@@ -35,38 +35,130 @@
   
   <!-- Main Content Section -->
   
-  <div class="row">
-  
-    <div class="large-8 columns">
-      <h4>Meet TankFollower</h4>
-      <p>Meet TankFollower, a versatile, following robot built in six weeks for Elecanisms, an electrical and mechanical prototyping course at Olin College of Engineering.</p>
-      <p>Our externally facing goal was to design and build, a versatile, autonomous robot that follows a person. Internally, our goal was to continue learning about the integration of mechanical, electrical, and software systems.</p>
-      <p><a href="#" class="secondary small button">Next Page &rarr;</a></p>
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-10 columns" role="content">
+
+      <article>
+
+        <h3><a href="#">Design Goals</a></h3>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>The mechanical goal was to create a robotic frame that could handle significant weight and adapt to different load cases through modular design.</p>
+            <p>
+              Components were sourced as the project progressed, so we needed to make sure the design could change as other alterations were </p>
+         </div>
+          <div class="large-6 columns">
+            <img src="./static/img/image06_cropped.jpg">
+          </div>
+        </div>
+
+      </article>
+
+
+      <article>
+
+        <h3><a href="#">The Frame</a></h3>
+
+        <div class="row">
+          <div class="large-6 columns">
+            <p>
+            The frame was constructed entirely of 1” 80/20. This design choice was made to allow for the tankbot to be a modular platform for further work. 80/20 was advantageous, however, in that none of our mounting locations were permanent and the design could be altered to accommodate different components as we sourced them.  80/20 also allowed us to forgo chain tensioners since we were able to tension the chain using the sliding pillow block shaft bushings.  The shaft brackets made it very easy to remove and replace chain for different sprocket configurations.  We could not afford 80/20 hardware with our budget, so we sourced L brackets and hardware from other sources.  The tankbot was enclosed from the top with two sheets of acrylic.  
+            </p>
+          </div>
+        <div class="large-6 columns">
+            <ul class="large-block-grid-3 clearing-thumbs" data-clearing>
+              <li><a href="static/img/image00.jpg"><img src="static/img/image00.jpg"></a></li>
+              <li><a href="static/img/image01.jpg"><img src="static/img/image01.jpg"></a></li>
+              <li><a href="static/img/image02.jpg"><img src="static/img/image02.jpg"></a></li>
+              <li><a href="static/img/image03.jpg"><img src="static/img/image03.jpg"></a></li>
+              <li><a href="static/img/image06.jpg"><img src="static/img/image06.jpg"></a></li>
+              <li><a href="static/img/image05.jpg"><img src="static/img/image05.jpg"></a></li>
+            </ul>
+          </div>
+          </div>
+      </article>
+
+      <article>
+        <h3><a href="#">Powertrain</a></h3>
+        <div class="row">
+          <div class="large-8 columns">
+            <p>
+              The tankbot is powered by two RS550 motors, each with a stall current of 85A, and a maximum of 0.35 foot pounds of torque.
+            </p>
+            <p>
+              The two motors are each coupled to a gearbox which each have a four-stage 256:1 reduction.  This gives us significant torque and allows the tankbot to transport heavier loads.  Our original intention was the modify the gearbox to remove a reduction and give us a 64:1 reduction, which would allow tankbot to move considerably faster.  However, trial runs of the tankbot at 256:1 proved that the speed was adequate at .4 mph. 
+            <img src="./static/img/image10.png">
+            </p>
+            <p>
+               These gearboxes are each keyed to an output shaft on both sides.  These shafts each have two keyed sprockets.  The sprockets each have a chain which translates the power to the lower ground sprockets and power the robot.  Although only four sprockets were technically needed per side, the upper motor mount and sprocket pair keeps the motor and gearbox away from any chance of being damaged by water or other obstacles near the ground.  The tankbot can either run on the chains themselves or the tread depending on the amount of friction desired with a given ground surface.  
+            </p>
+          </div>
+        <div class="large-4 columns">
+            <ul class="clearing-thumbs" data-clearing>
+              <li><a href="static/img/image12.jpg"><img src="static/img/image12.jpg"></a></li>
+              <li><a href="static/img/image08.jpg"><img src="static/img/image08.jpg"></a></li>
+            </ul>
+          </div>
+          </div>
+      </article>
+      <article>
+        <h3><a href="#">Electronic Mounting</a></h3>
+        <div class="row">
+          <div class="large-8 columns">
+            <p>
+              The electronics are all mounted on a piece of acrylic that was laser cut in order to provide proper mounting locations.  This mounting plate is mounted on the bottom of the tankbot with the electronics facing upwards to keep them away from the ground and protected.
+            </p>
+          </div>
+        <div class="large-4 columns">
+            <ul class="clearing-thumbs" data-clearing>
+              <li><a href="static/img/image05.jpg"><img src="static/img/image05.jpg"></a></li>
+            </ul>
+          </div>
+          </div>
+      </article>
+      <article>
+        <h3 data-magellan-destination="Treads"><a href="#">Treads</a></h3>
+        <div class="row">
+          <div class="large-8 columns">
+            <p>
+              Inspired by the concept of a tank, which can handle all terrains, we attempted to build treads ourselves, in order to save costs.
+              The treads are cast out of ReoFlex 50; this an easily castable two part castable urethane composite. This particular urethane was chosen for a number of reasons. The 50A durometer of the material is an optimal tread hardness allowing for a structural yet flexible, and tacky nature for adequate grip on smooth hard surfaces such as tile. It was also chosen for its high abrasion and tear resistance, being able to more easily withstand the rigors of skid steer tank tread driving. Molds for the treads were made out of polyurethane foam and plastic sheeting.
+            </p>
+          </div>
+          </div>
+      </article>
+
+
+
     </div>
-    
-    <div class="large-4 columns">
-    
-      <!-- Gallery sidebar with a block grid. Note: block grid items should be the same size for optimal results -->
-      
-      <ul class="small-block-grid-3">
-        <li><a href="#"><img src="./img/image00.jpg" /></a></li>
-        <li><a href="#"><img src="./img/image01.jpg" /></a></li>
-        <li><a href="#"><img src="./img/image02.jpg" /></a></li>
-        <li><a href="#"><img src="./img/image03.jpg" /></a></li>
-        <li><a href="#"><img src="./img/image06.jpg" /></a></li>
-        <li><a href="#"><img src="./img/image05.jpg" /></a></li>
+
+    <!-- End Main Content -->
+
+
+    <!-- Sidebar -->
+
+    <aside class="large-2 columns">
+
+      <h5>Categories</h5>
+      <ul class="side-nav">
+        <li><a href="#">Design Goals</a></li>
+        <li><a href="#">Frame</a></li>
+        <li><a href="#">Powertrain</a></li>
+        <li><a href="#">Electronics Mounting</a></li>
+        <li><a href="#">Treads</a></li>
       </ul>
-    </div>
-        
+
+
+    </aside>
+
+    <!-- End Sidebar -->
   </div>
-    <div class="row">
-      <div class="wrapper">
-        <div class="large-12 columns iframeHolder">
-          <img class="ratio" src="http://placehold.it/560x315"/>
-          <iframe src="//www.youtube.com/embed/fqIHsrYuOVs" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>  
+
+
+  
+  
   <!-- Footer -->
   
   <footer class="row">
@@ -74,18 +166,7 @@
       <hr />
       <div class="row">
         <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
-            <li><a href="#">Link 6</a></li>
-            <li><a href="#">Link 7</a></li>
-          </ul>
+          <p>&copy; Made with love by Cory Dolphin at Olin College</p>
         </div>
       </div>
     </div> 

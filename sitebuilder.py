@@ -16,8 +16,9 @@ freezer = Freezer(app)
 def index(path):
     return render_template(path)
 
-
-
+@freezer.register_generator
+def default_generator():
+    yield 'index', {'path':'index.html' }
 def copy_files(src, dest, ignore=None):
     for f in os.listdir(src):
         if not os.path.isdir(f):

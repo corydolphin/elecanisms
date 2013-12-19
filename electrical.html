@@ -20,13 +20,13 @@
   <div class="row">
     <div class="large-12 columns">
       <ul class="button-group">
-        <li><a href="{{url_for('index',path='index.html')}}" class="button">Overview</a></li>
-        <li><a href="{{url_for('index',path='electrical.html')}}" class="button">Electrical</a></li>
-        <li><a href="{{url_for('index',path='mechanical.html')}}" class="button">Mechanical</a></li>
+        <li><a href="/" class="button">Overview</a></li>
+        <li><a href="/electrical.html" class="button">Electrical</a></li>
+        <li><a href="/mechanical.html" class="button">Mechanical</a></li>
         <li><a href="#" class="button">Reflection</a></li>
       </ul>
-      {% block banner %}          
-      {% endblock %}
+                
+      
     </div>
   </div>
   
@@ -34,9 +34,33 @@
   
   
   <!-- Main Content Section -->
-  {% block maincontent %}
+  
+  <div class="row">
+  
+    <div class="large-8 columns">
+      <h4>Meet TankFollower</h4>
+      <p>Meet TankFollower, a versatile, following robot built in six weeks for Elecanisms, an electrical and mechanical prototyping course at Olin College of Engineering.</p>
+      <p>Our externally facing goal was to design and build, a versatile, autonomous robot that follows a person. Internally, our goal was to continue learning about the integration of mechanical, electrical, and software systems.</p>
+      <p><a href="#" class="secondary small button">Next Page &rarr;</a></p>
+    </div>
+    
+    <div class="large-4 columns">
+    
+      <!-- Gallery sidebar with a block grid. Note: block grid items should be the same size for optimal results -->
+      
+      <ul class="small-block-grid-3">
+        <li><a href="#"><img src="static/img/image00.jpg" /></a></li>
+        <li><a href="#"><img src="static/img/image01.jpg" /></a></li>
+        <li><a href="#"><img src="static/img/image02.jpg" /></a></li>
+        <li><a href="#"><img src="static/img/image03.jpg" /></a></li>
+        <li><a href="#"><img src="static/img/image06.jpg" /></a></li>
+        <li><a href="#"><img src="static/img/image05.jpg" /></a></li>
+      </ul>
+    </div>
+        
+  </div>
 
-  {% endblock %}
+
   
   
   <!-- Footer -->
