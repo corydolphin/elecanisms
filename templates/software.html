@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block maincontent %}
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-10 columns" role="content">
+
+      <article>
+
+        <h3><a href="#">System Overview</a></h3>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>
+              The frame was constructed entirely of 1” 80/20. This design choice was made to allow for the tankbot to be a modular platform for further work. 80/20 was advantageous, however, in that none of our mounting locations were permanent and the design could be altered to accommodate different components as we sourced them.  80/20 also allowed us to forgo chain tensioners since we were able to tension the chain using the sliding pillow block shaft bushings.  The shaft brackets made it very easy to remove and replace chain for different sprocket configurations.  We could not afford 80/20 hardware with our budget, so we sourced L brackets and hardware from other sources.  The tankbot was enclosed from the top with two sheets of acrylic.  
+            </p>
+            <pre><code data-language="python">
+def get_speed(self, transErr, rotErr):
+        # proportional control
+        linVel = -100000*transErr
+        angVel = -100000*rotErr
+
+        # saturate
+        linVel = max(min(linVel, 32767), -32767)
+        angVel = max(min(angVel, 32767), -32767)
+
+        # dead zone
+        if abs(transErr) < .1:
+                linVel = 0
+        if abs(rotErr) < .1:
+                angVel = 0
+
+        return linVel, angVel
+            </code></pre>
+         </div>
+          <div class="large-6 columns">
+            <img src="./static/img/image04.png">
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- End Main Content -->
+  </div>
+
+{% endblock %}
