@@ -12,7 +12,9 @@
 
     <link rel="stylesheet" href="static/css/foundation.css" />
     <link rel="stylesheet" href="static/css/elecanisms.css" />
+    <link rel="stylesheet" href="static/css/theme.css" />
     <script src="static/js/modernizr.js"></script>
+
   </head>
   <body>
     
@@ -23,7 +25,7 @@
         <li><a href="index.html" class="button">Overview</a></li>
         <li><a href="electrical.html" class="button">Electrical</a></li>
         <li><a href="mechanical.html" class="button">Mechanical</a></li>
-        <li><a href="#" class="button">Reflection</a></li>
+        <li><a href="software.html" class="button">Software</a></li>
       </ul>
                 
   <!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
@@ -49,7 +51,13 @@
     <div class="large-8 columns">
       <h4>Meet TankFollower</h4>
       <p>Meet TankFollower, a versatile, following robot built in six weeks for Elecanisms, an electrical and mechanical prototyping course at Olin College of Engineering.</p>
-      <p>Our externally facing goal was to design and build, a versatile, autonomous robot that follows a person. Internally, our goal was to continue learning about the integration of mechanical, electrical, and software systems.</p>
+      <p>
+        Our externally facing goal was to design and build, a versatile, autonomous robot that follows a person. Internally, our goal was to continue learning about the integration of mechanical, electrical, and software systems.
+      </p>
+      <p>
+        We were able to build a treaded robot that followed a user, but we would have liked to achieve a more robust following behavior. Given more time, we would improve upon the control system and iterate on the treads. The combination of a basic control algorithm and not enough friction to reliably skid steer made the following behavior unreliable.
+      </p>
+
       <p><a href="electrical.html" class="secondary small button">Learn how we did it &rarr;</a></p>
     </div>
     
@@ -60,8 +68,6 @@
       <ul class="small-block-grid-3 clearing-thumbs" data-clearing>
         
           <li><a href="static/img/image00.jpg"><img src="static/img/image00.jpg"></a></li>
-        
-          <li><a href="static/img/image01.jpg"><img src="static/img/image01.jpg"></a></li>
         
           <li><a href="static/img/image01.jpg"><img src="static/img/image01.jpg"></a></li>
         
@@ -98,6 +104,7 @@
     </div> 
   </footer>
     <script src="static/js/jquery.js"></script>
+    <script src="static/js/rainbow-custom.min.js"></script>
     <script src="static/js/foundation.min.js"></script>
     <script>
       $(document).foundation();

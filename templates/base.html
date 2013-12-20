@@ -12,7 +12,9 @@
 
     <link rel="stylesheet" href="static/css/foundation.css" />
     <link rel="stylesheet" href="static/css/elecanisms.css" />
+    <link rel="stylesheet" href="static/css/theme.css" />
     <script src="static/js/modernizr.js"></script>
+
   </head>
   <body>
     
@@ -23,7 +25,7 @@
         <li><a href="{{url_for('index',path='index.html')}}" class="button">Overview</a></li>
         <li><a href="{{url_for('index',path='electrical.html')}}" class="button">Electrical</a></li>
         <li><a href="{{url_for('index',path='mechanical.html')}}" class="button">Mechanical</a></li>
-        <li><a href="#" class="button">Reflection</a></li>
+        <li><a href="{{url_for('index',path='software.html')}}" class="button">Software</a></li>
       </ul>
       {% block banner %}          
       {% endblock %}
@@ -52,6 +54,7 @@
     </div> 
   </footer>
     <script src="static/js/jquery.js"></script>
+    <script src="static/js/rainbow-custom.min.js"></script>
     <script src="static/js/foundation.min.js"></script>
     <script>
       $(document).foundation();

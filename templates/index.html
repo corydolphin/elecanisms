@@ -18,7 +18,13 @@
     <div class="large-8 columns">
       <h4>Meet TankFollower</h4>
       <p>Meet TankFollower, a versatile, following robot built in six weeks for Elecanisms, an electrical and mechanical prototyping course at Olin College of Engineering.</p>
-      <p>Our externally facing goal was to design and build, a versatile, autonomous robot that follows a person. Internally, our goal was to continue learning about the integration of mechanical, electrical, and software systems.</p>
+      <p>
+        Our externally facing goal was to design and build, a versatile, autonomous robot that follows a person. Internally, our goal was to continue learning about the integration of mechanical, electrical, and software systems.
+      </p>
+      <p>
+        We were able to build a treaded robot that followed a user, but we would have liked to achieve a more robust following behavior. Given more time, we would improve upon the control system and iterate on the treads. The combination of a basic control algorithm and not enough friction to reliably skid steer made the following behavior unreliable.
+      </p>
+
       <p><a href="{{url_for('index',path='electrical.html')}}" class="secondary small button">Learn how we did it &rarr;</a></p>
     </div>
     
@@ -27,7 +33,7 @@
       <!-- Gallery sidebar with a block grid. Note: block grid items should be the same size for optimal results -->
       
       <ul class="small-block-grid-3 clearing-thumbs" data-clearing>
-        {% for img in ["image00.jpg", "image01.jpg", "image01.jpg", "image02.jpg", "image03.jpg", "image13.jpg", "image12.jpg", "image14.jpg", "image15.jpg"] %}
+        {% for img in ["image00.jpg", "image01.jpg", "image02.jpg", "image03.jpg", "image13.jpg", "image12.jpg", "image14.jpg", "image15.jpg"] %}
           <li><a href="static/img/{{img}}"><img src="static/img/{{img}}"></a></li>
         {% endfor %}
       </ul>

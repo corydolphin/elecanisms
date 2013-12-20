@@ -11,7 +11,8 @@
         <div class="row">
           <div class="large-6 columns">
             <p>
-              The frame was constructed entirely of 1” 80/20. This design choice was made to allow for the tankbot to be a modular platform for further work. 80/20 was advantageous, however, in that none of our mounting locations were permanent and the design could be altered to accommodate different components as we sourced them.  80/20 also allowed us to forgo chain tensioners since we were able to tension the chain using the sliding pillow block shaft bushings.  The shaft brackets made it very easy to remove and replace chain for different sprocket configurations.  We could not afford 80/20 hardware with our budget, so we sourced L brackets and hardware from other sources.  The tankbot was enclosed from the top with two sheets of acrylic.  
+              Above is a system diagram describing the main parts of the follower. The Kinect sensor observes the environment, and returns a point cloud describing its surroundings. This data is used in a control algorithm run on the PC, which sends motor commands to the PIC24. The PIC modulates 2 PWM signals (one for each motor) and outputs them to the 2 motor controllers. 
+              These H-bridge motor controllers control the flow of current from the battery to the motors, driving the treads. 
             </p>
          </div>
           <div class="large-6 columns">
