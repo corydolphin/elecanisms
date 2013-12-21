@@ -48,8 +48,21 @@
         <div class="row">
           <div class="large-6 columns">
             <p>
-              The frame was constructed entirely of 1” 80/20. This design choice was made to allow for the tankbot to be a modular platform for further work. 80/20 was advantageous, however, in that none of our mounting locations were permanent and the design could be altered to accommodate different components as we sourced them.  80/20 also allowed us to forgo chain tensioners since we were able to tension the chain using the sliding pillow block shaft bushings.  The shaft brackets made it very easy to remove and replace chain for different sprocket configurations.  We could not afford 80/20 hardware with our budget, so we sourced L brackets and hardware from other sources.  The tankbot was enclosed from the top with two sheets of acrylic.  
+              There were two main componenets of software for this project: firmware executed on a PIC microcontroller, and control code executed on the mounted laptop.
             </p>
+        <h4><a href="#">Firmware</a></h4>
+            <p>
+              On the PIC, we designed a USB service to receive motor commands over USB Control Transfer. 
+            </p>
+
+        <h4><a href="#">Host Control</a></h4>
+            <p>
+              On a standard laptop, the main control system was implemented. The PC read approximately 200,000 3d points in a point cloud data stream from the Kinect. From this point cloud, we removed all elements outside of a bounding box in front of the robot. We then computed the average depth of all points within this bounding box and compared it to a target distance in order to determine our translational error from our goal following distance. 
+            </p>
+            <p>
+              From these errors, we used simple proportional control with a saturating function to make the robot correct its course automatically. 
+            </p>
+
             <pre><code data-language="python">
 def get_speed(self, transErr, rotErr):
         # proportional control
